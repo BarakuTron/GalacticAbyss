@@ -22,7 +22,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move() {
         transform.Translate(direction * speed * Time.deltaTime);
-        SetAnimationMovement(direction);
+
+        if(direction.x != 0 || direction.y != 0) {
+            SetAnimationMovement(direction);
+        }
+        else {
+            animator.SetLayerWeight(1, 0); //Prioritize idle when idle
+        }
+
     }
 
     private void TakeInput() {
@@ -43,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void SetAnimationMovement(Vector2 direction) {
+        animator.SetLayerWeight(1, 1); //prioritize walking when walking
         animator.SetFloat("xDir", direction.x);
 
         if (direction.x > 0) {
