@@ -11,13 +11,17 @@ public class LaserShot : MonoBehaviour
 
     public Vector3 spawnOffset = new Vector3(0, 0.5f, 0);
 
+    private Vector2 initialMousePos;
+
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // Capture initial mouse position
+            initialMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
             Vector2 myPos = transform.position;
-            Vector2 direction = (mousePos - myPos).normalized;
+            Vector2 direction = (initialMousePos - myPos).normalized;
 
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
