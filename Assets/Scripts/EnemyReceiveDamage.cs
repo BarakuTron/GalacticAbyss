@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ public class EnemyReceiveDamage : MonoBehaviour
 {
     public float health;
     public float maxHealth;
+
+    public static event Action OnEnemyKilled;
 
     void Start()
     {
@@ -30,6 +33,7 @@ public class EnemyReceiveDamage : MonoBehaviour
     {
         if (health <= 0)
         {
+            OnEnemyKilled?.Invoke();
             Destroy(gameObject);
         }
     }
