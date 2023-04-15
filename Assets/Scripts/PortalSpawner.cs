@@ -8,11 +8,16 @@ public class PortalSpawner : MonoBehaviour
     private GameObject portalInstance;
     private int enemyCount;
 
-    void Start()
+void Start()
+{
+    portalInstance = GameObject.FindWithTag("Portal");
+    if (portalInstance != null)
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        EnemyReceiveDamage.OnEnemyKilled += HandleEnemyKilled;
+        portalInstance.SetActive(false);
     }
+    enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+    EnemyReceiveDamage.OnEnemyKilled += HandleEnemyKilled;
+}
 
     void HandleEnemyKilled()
     {
@@ -25,14 +30,18 @@ public class PortalSpawner : MonoBehaviour
     }
 
     void SpawnPortal()
+{
+    if (portalInstance == null)
     {
-        if (portalInstance == null)
-        {
-            portalInstance = Instantiate(portalPrefab, transform.position, Quaternion.identity);
-            portalInstance.SetActive(false);
-        }
+        portalInstance = Instantiate(portalPrefab, transform.position, Quaternion.identity);
+        portalInstance.SetActive(false);
+    }
+    
+    if (enemyCount <= 0)
+    {
         portalInstance.SetActive(true);
     }
+}
 
     void OnDestroy()
     {
