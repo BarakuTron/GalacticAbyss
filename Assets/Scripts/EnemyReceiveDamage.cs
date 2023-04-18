@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class EnemyReceiveDamage : MonoBehaviour
 
     public GameObject healthBar;
     public Slider healthBarSlider;
+
+    public static event Action OnEnemyKilled;
 
     void Start()
     {
@@ -43,6 +46,9 @@ public class EnemyReceiveDamage : MonoBehaviour
     {
         if (health <= 0)
         {
+            OnEnemyKilled?.Invoke();
+
+
             Destroy(gameObject);
         }
     }
