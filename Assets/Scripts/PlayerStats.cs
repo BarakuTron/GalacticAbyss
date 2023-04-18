@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
 
     void Awake()
     {
-        if(playerStats != this)
+        if(playerStats != null)
         {
             Destroy(playerStats);
         }

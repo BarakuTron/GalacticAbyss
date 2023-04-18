@@ -429,9 +429,10 @@ GameObject:
   - component: {fileID: 6769659894900881852}
   - component: {fileID: 6769659894900881854}
   - component: {fileID: -2980038076098139247}
+  - component: {fileID: 4614543824166737821}
   m_Layer: 0
   m_Name: DefaultEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -546,3 +547,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 34.0625, y: 46.5}
   m_EdgeRadius: 0
+--- !u!114 &4614543824166737821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769659894900881851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e7f6a5cbba490499da104b756858c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 3264556901411022367, guid: ce981badd0e77d04ab1d0a5b5e0171bc, type: 3}
+  minDamage: 5
+  maxDamage: 10
+  projectileForce: 10
+  cooldown: 5
