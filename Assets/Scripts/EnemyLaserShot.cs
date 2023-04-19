@@ -9,7 +9,8 @@ public class EnemyLaserShot : MonoBehaviour
     public float minDamage;
     public float maxDamage;
     public float projectileForce;
-    public float cooldown;
+    public float minCooldown;
+    public float maxCooldown;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class EnemyLaserShot : MonoBehaviour
 
     IEnumerator ShootPlayer()
     {
+        float cooldown = Random.Range(minCooldown, maxCooldown);
         yield return new WaitForSeconds(cooldown);
         if(player != null)
         {
@@ -30,6 +32,5 @@ public class EnemyLaserShot : MonoBehaviour
             laserShot.GetComponent<EnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
             StartCoroutine(ShootPlayer());
         }
-        
     }
 }
