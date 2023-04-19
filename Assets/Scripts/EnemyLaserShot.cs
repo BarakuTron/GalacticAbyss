@@ -24,10 +24,12 @@ public class EnemyLaserShot : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         if(player != null)
         {
-            GameObject laserShot = Instantiate(projectile, transform.position, Quaternion.identity);
             Vector2 myPos = transform.position;
             Vector2 targetPos = player.transform.position;
             Vector2 direction = (targetPos - myPos).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            GameObject laserShot = Instantiate(projectile, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
             laserShot.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
             laserShot.GetComponent<EnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
             StartCoroutine(ShootPlayer());
