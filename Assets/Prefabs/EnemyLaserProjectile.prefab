@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3170822843461274258}
   - component: {fileID: 18008996186787642}
   - component: {fileID: 605771224679111357}
-  - component: {fileID: -882189669953535537}
+  - component: {fileID: 6760843905966051760}
   m_Layer: 0
-  m_Name: LaserProjectile
-  m_TagString: Untagged
+  m_Name: EnemyLaserProjectile
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 0.17069295, b: 0.8301887, a: 1}
+  m_Color: {r: 0.5660378, g: 0.024919849, b: 0.024919849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -124,7 +124,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-882189669953535537
+--- !u!114 &6760843905966051760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3264556901411022367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f95129965196de94e85c278f459641e3, type: 3}
+  m_Script: {fileID: 11500000, guid: a973cf84b2bc1384bacf824f18d2c71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0

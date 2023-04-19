@@ -6890,7 +6890,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2084222822
 Transform:
@@ -8117,10 +8117,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3320442905693050898, guid: a1d6092123389984bb7567471dc77efb, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1d6092123389984bb7567471dc77efb, type: 3}
 --- !u!1001 &6769659895227006912
@@ -8133,10 +8129,6 @@ PrefabInstance:
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_RootOrder
