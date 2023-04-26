@@ -430,6 +430,8 @@ GameObject:
   - component: {fileID: 6769659894900881854}
   - component: {fileID: -2980038076098139247}
   - component: {fileID: 4614543824166737821}
+  - component: {fileID: 1360192517}
+  - component: {fileID: 1360192518}
   m_Layer: 0
   m_Name: DefaultEnemy
   m_TagString: Enemy
@@ -554,7 +556,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6769659894900881851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28e7f6a5cbba490499da104b756858c2, type: 3}
   m_Name: 
@@ -565,3 +567,46 @@ MonoBehaviour:
   projectileForce: 10
   minCooldown: 1
   maxCooldown: 3
+--- !u!114 &1360192517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769659894900881851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd3fdea6b1939b4e8e861bb439e7662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolSpeed: 2
+  attackSpeed: 2
+  detectionRange: 8
+  patrolRadius: 3
+  timeSinceLastAttack: 0
+  attackCooldown: 2
+  projectile: {fileID: 3264556901411022367, guid: ce981badd0e77d04ab1d0a5b5e0171bc, type: 3}
+  minDamage: 3
+  maxDamage: 8
+  projectileForce: 10
+--- !u!50 &1360192518
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769659894900881851}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
