@@ -504,6 +504,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &431731202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8793597487878071151, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
+  m_PrefabInstance: {fileID: 1653586740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &431731207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431731202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbc298fbb770ed4a92a936977f01fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 0
+  healthBar: {fileID: 0}
+  healthBarSlider: {fileID: 0}
 --- !u!1 &710271532
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +641,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &856870387 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 49951196527616898, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
+  m_PrefabInstance: {fileID: 1653586740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923715411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1297,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5907653178530707241, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
+      propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907653178530707241, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907653178530707241, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
+      propertyPath: healthBarSlider
+      value: 
+      objectReference: {fileID: 856870387}
+    - target: {fileID: 8392927618449915769, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 8793597487878071151, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
       propertyPath: m_Name
       value: Nexus
