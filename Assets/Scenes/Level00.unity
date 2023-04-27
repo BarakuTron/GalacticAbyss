@@ -696,14 +696,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2122722746, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2122722746, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (1)
@@ -1392,27 +1384,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3320442905693050897, guid: a1d6092123389984bb7567471dc77efb, type: 3}
   m_PrefabInstance: {fileID: 3320442904515906382}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &1584386917
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584386908}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1960866218
 GameObject:
   m_ObjectHideFlags: 0
@@ -8161,22 +8132,6 @@ PrefabInstance:
     - target: {fileID: 3320442905693050898, guid: a1d6092123389984bb7567471dc77efb, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3320442905693050898, guid: a1d6092123389984bb7567471dc77efb, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3320442905693050924, guid: a1d6092123389984bb7567471dc77efb, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3320442905693050924, guid: a1d6092123389984bb7567471dc77efb, type: 3}
-      propertyPath: m_UsedByEffector
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3320442905693050924, guid: a1d6092123389984bb7567471dc77efb, type: 3}
-      propertyPath: m_UsedByComposite
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1d6092123389984bb7567471dc77efb, type: 3}
