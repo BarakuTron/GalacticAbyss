@@ -15,12 +15,18 @@ public class NexusDamageScript : EnemyReceiveDamage
         if(alive) {
             healthBar.SetActive(true);
             health -= damage;
-            CheckDeath2();
+            CheckDeath();
             healthBarSlider.value = CalculateHealthPercentage();
         }
     }
 
-    private void CheckDeath2()
+    private IEnumerator DestroyAfterAnimation()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+        Destroy(gameObject);
+    }
+
+    private void CheckDeath()
     {
         if (health <= 0)
         {
@@ -33,9 +39,7 @@ public class NexusDamageScript : EnemyReceiveDamage
             //if it is, then the player has won
             // GameManager.Instance.PlayerWon();
     
-
-
-           // Destroy(gameObject);
+            StartCoroutine(DestroyAfterAnimation());
         }
     }
 

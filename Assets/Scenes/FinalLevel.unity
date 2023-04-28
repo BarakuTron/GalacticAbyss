@@ -531,6 +531,29 @@ MonoBehaviour:
   healthBar: {fileID: 856870386}
   healthBarSlider: {fileID: 856870387}
   animator: {fileID: 431731210}
+--- !u!114 &431731216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431731202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42c43f312db71a46b3d6b22d70e7eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 431731210}
+  patrolSpeed: 2
+  attackSpeed: 2
+  detectionRange: 5
+  patrolRadius: 3
+  timeSinceLastAttack: 0
+  attackCooldown: 2
+  projectile: {fileID: 3264556901411022367, guid: ce981badd0e77d04ab1d0a5b5e0171bc, type: 3}
+  minDamage: 5
+  maxDamage: 10
+  projectileForce: 10
 --- !u!1 &710271532
 GameObject:
   m_ObjectHideFlags: 0
