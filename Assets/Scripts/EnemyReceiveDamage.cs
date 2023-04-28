@@ -19,7 +19,7 @@ public class EnemyReceiveDamage : MonoBehaviour
         health = maxHealth;
     }
 
-    public void DealDamage(float damage)
+    public virtual void DealDamage(float damage)
     {
         healthBar.SetActive(true);
         health -= damage;
@@ -53,7 +53,7 @@ public class EnemyReceiveDamage : MonoBehaviour
         }
     }
 
-    private float CalculateHealthPercentage()
+    public float CalculateHealthPercentage()
     {
         return health / maxHealth;
     }
