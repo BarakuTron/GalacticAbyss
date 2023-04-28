@@ -822,7 +822,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0085, y: 2.1882}
-  m_SizeDelta: {x: 928.2194, y: 15.2316}
+  m_SizeDelta: {x: 928.2194, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &49951196527616898
 MonoBehaviour:
@@ -4101,10 +4101,11 @@ GameObject:
   - component: {fileID: 8180888717961566294}
   - component: {fileID: 1262948420644807584}
   - component: {fileID: 431731206}
-  - component: {fileID: 5907653178530707241}
+  - component: {fileID: 431731212}
+  - component: {fileID: 431731216}
   m_Layer: 0
   m_Name: Nexus
-  m_TagString: Untagged
+  m_TagString: Nexus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4187,7 +4188,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.139204, y: 7.294782}
   m_EdgeRadius: 0
---- !u!114 &5907653178530707241
+--- !u!114 &431731212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4196,13 +4197,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 8793597487878071151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbc298fbb770ed4a92a936977f01fd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bf91d51b06286d4ebc35f55f5d68d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 0
+  maxHealth: 1000
   healthBar: {fileID: 973023739618069366}
-  healthBarSlider: {fileID: 0}
+  healthBarSlider: {fileID: 49951196527616898}
+  animator: {fileID: 8180888717961566294}
+--- !u!114 &431731216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8793597487878071151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42c43f312db71a46b3d6b22d70e7eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8180888717961566294}
+  patrolSpeed: 2
+  attackSpeed: 2
+  detectionRange: 5
+  patrolRadius: 3
+  timeSinceLastAttack: 0
+  attackCooldown: 2
+  projectile: {fileID: 3264556901411022367, guid: ce981badd0e77d04ab1d0a5b5e0171bc, type: 3}
+  minDamage: 5
+  maxDamage: 10
+  projectileForce: 10
 --- !u!1 &9039213844999552892
 GameObject:
   m_ObjectHideFlags: 0
