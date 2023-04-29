@@ -7207,6 +7207,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2186413284511342611, guid: 9549720100e4d5c408a2c7003bfa79f3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186413284511342611, guid: 9549720100e4d5c408a2c7003bfa79f3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4330407815728849165, guid: 9549720100e4d5c408a2c7003bfa79f3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -7265,6 +7273,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4330407817709109943, guid: 9549720100e4d5c408a2c7003bfa79f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083780401185982163, guid: 9549720100e4d5c408a2c7003bfa79f3, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
