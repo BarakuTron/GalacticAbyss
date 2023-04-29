@@ -62,15 +62,17 @@ public class PortalSpawner : MonoBehaviour
             {
                 if (portalColor == PortalColor.Red)
                 {
-                    // Do nothing
+                    playerStats.AddScore(50);
                 }
                 else if (portalColor == PortalColor.Blue)
                 {
+                    playerStats.AddScore(30);
                     // Heal the player by 50% of the health needed to get to max health
                     playerStats.HealCharacter((playerStats.maxHealth - playerStats.health) / 2);
                 }
                 else if (portalColor == PortalColor.Green)
                 {
+                    playerStats.AddScore(10);
                     // Heal the player by 100%
                     playerStats.HealCharacter(playerStats.maxHealth);
                 }
