@@ -47,7 +47,8 @@ public class EnemyReceiveDamage : MonoBehaviour
         if (health <= 0)
         {
             OnEnemyKilled?.Invoke();
-
+            
+            PlayerStats.playerStats.AddScore(10);
 
             Destroy(gameObject);
         }

@@ -16,17 +16,24 @@ public class PlayerStats : MonoBehaviour
     public float health;
     public float maxHealth = 100;
 
+    private int gems;
+    private int score;
+    public TextMeshProUGUI gemsCounter;
+    public TextMeshProUGUI scoreCounter;
+
+    public PlayerHitSound hitSound;
+
     void Awake()
     {
-        if(playerStats != null)
-        {
-            Destroy(playerStats);
-        }
-        else 
+        if(playerStats == null)
         {
             playerStats = this;
+            DontDestroyOnLoad(this);
         }
-        DontDestroyOnLoad(this);  
+        else if(playerStats != this)
+        {
+            Destroy(gameObject);
+        }  
     }
     
     void Start()
@@ -37,6 +44,7 @@ public class PlayerStats : MonoBehaviour
 
     public void DealDamage(float damage)
     {
+        hitSound.PlaySound();
         health -= damage;
         CheckDeath();
         SetHealthUI();
@@ -75,5 +83,25 @@ public class PlayerStats : MonoBehaviour
     private float CalculateHealthPercentage()
     {
         return health / maxHealth;
+    }
+
+    public void AddGem() {
+        gems++;
+        SetGemUI();
+    }
+
+    public void AddScore(int scoreToAdd) {
+        score += scoreToAdd;
+        SetScoreUI();
+    }
+
+    private void SetGemUI()
+    {
+        gemsCounter.text = "Infinity Stones: " + gems.ToString() + "/5";
+    }
+
+    private void SetScoreUI()
+    {
+        scoreCounter.text = "Score : " + score.ToString();
     }
 }
