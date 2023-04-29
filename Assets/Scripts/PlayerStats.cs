@@ -21,6 +21,8 @@ public class PlayerStats : MonoBehaviour
     public TextMeshProUGUI gemsCounter;
     public TextMeshProUGUI scoreCounter;
 
+    public PlayerHitSound hitSound;
+
     void Awake()
     {
         if(playerStats == null)
@@ -42,6 +44,7 @@ public class PlayerStats : MonoBehaviour
 
     public void DealDamage(float damage)
     {
+        hitSound.PlaySound();
         health -= damage;
         CheckDeath();
         SetHealthUI();
