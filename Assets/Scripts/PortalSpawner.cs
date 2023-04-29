@@ -56,8 +56,9 @@ public class PortalSpawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerStats playerStats = other.GetComponent<PlayerStats>();
-            if (playerStats != null)
+            PlayerStats playerStats = PlayerStats.playerStats;
+            
+            if(playerStats != null)
             {
                 if (portalColor == PortalColor.Red)
                 {
@@ -65,8 +66,8 @@ public class PortalSpawner : MonoBehaviour
                 }
                 else if (portalColor == PortalColor.Blue)
                 {
-                    // Heal the player by 50%
-                    playerStats.HealCharacter(playerStats.maxHealth * 0.5f);
+                    // Heal the player by 50% of the health needed to get to max health
+                    playerStats.HealCharacter((playerStats.maxHealth - playerStats.health) / 2);
                 }
                 else if (portalColor == PortalColor.Green)
                 {
@@ -74,6 +75,7 @@ public class PortalSpawner : MonoBehaviour
                     playerStats.HealCharacter(playerStats.maxHealth);
                 }
             }
+            
 
             // Load the next scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

@@ -18,15 +18,15 @@ public class PlayerStats : MonoBehaviour
 
     void Awake()
     {
-        if(playerStats != null)
-        {
-            Destroy(playerStats);
-        }
-        else 
+        if(playerStats == null)
         {
             playerStats = this;
+            DontDestroyOnLoad(this);
         }
-        DontDestroyOnLoad(this);  
+        else if(playerStats != this)
+        {
+            Destroy(gameObject);
+        }  
     }
     
     void Start()
