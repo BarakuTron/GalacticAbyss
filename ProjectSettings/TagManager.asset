@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Item
   - Nexus
+  - RedPortal
+  - GreenPortal
+  - BluePortal
   layers:
   - Default
   - TransparentFX
