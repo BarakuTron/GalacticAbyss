@@ -907,38 +907,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923715411}
   m_CullTransparentMesh: 1
---- !u!1 &1027522133 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1754350586810431784, guid: 93dd5a8718d474a739ff6cc5d3cdd6e5, type: 3}
-  m_PrefabInstance: {fileID: 5215646421721700489}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1027522139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027522133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df08d2aee5b36a140bca136cb93d5cfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gemCount: 0
-  gemCounterText: {fileID: 1201189123}
---- !u!114 &1027522140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027522133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2710c6c2c0d29489484550ef9e9ce9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gemValue: 1
 --- !u!1 &1051609523
 GameObject:
   m_ObjectHideFlags: 0
@@ -8384,9 +8352,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1027522139, guid: 93dd5a8718d474a739ff6cc5d3cdd6e5, type: 3}
+      propertyPath: gemCounterText
+      value: 
+      objectReference: {fileID: 1201189123}
     - target: {fileID: 1754350586810431784, guid: 93dd5a8718d474a739ff6cc5d3cdd6e5, type: 3}
       propertyPath: m_Name
       value: Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754350586810431784, guid: 93dd5a8718d474a739ff6cc5d3cdd6e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2604393418759136241, guid: 93dd5a8718d474a739ff6cc5d3cdd6e5, type: 3}
       propertyPath: m_RootOrder
@@ -8431,10 +8407,6 @@ PrefabInstance:
     - target: {fileID: 2604393418759136241, guid: 93dd5a8718d474a739ff6cc5d3cdd6e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5215646420267107689, guid: 93dd5a8718d474a739ff6cc5d3cdd6e5, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93dd5a8718d474a739ff6cc5d3cdd6e5, type: 3}
