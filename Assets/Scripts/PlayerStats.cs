@@ -23,6 +23,8 @@ public class PlayerStats : MonoBehaviour
 
     public PlayerHitSound hitSound;
 
+    private bool isInvincible = false;
+
     void Awake()
     {
         if(playerStats == null)
@@ -44,10 +46,13 @@ public class PlayerStats : MonoBehaviour
 
     public void DealDamage(float damage)
     {
-        hitSound.PlaySound();
-        health -= damage;
-        CheckDeath();
-        SetHealthUI();
+        if(!isInvincible) 
+        {
+            hitSound.PlaySound();
+            health -= damage;
+            CheckDeath();
+            SetHealthUI();
+        }
     }
 
     public void HealCharacter(float heal)
@@ -103,5 +108,10 @@ public class PlayerStats : MonoBehaviour
     private void SetScoreUI()
     {
         scoreCounter.text = "Score : " + score.ToString();
+    }
+
+    public void SetInvincible(bool invincible)
+    {
+        isInvincible = invincible;
     }
 }
