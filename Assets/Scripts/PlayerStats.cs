@@ -16,6 +16,11 @@ public class PlayerStats : MonoBehaviour
     public float health;
     public float maxHealth = 100;
 
+    private int gems;
+    private int score;
+    public TextMeshProUGUI gemsCounter;
+    public TextMeshProUGUI scoreCounter;
+
     void Awake()
     {
         if(playerStats == null)
@@ -75,5 +80,25 @@ public class PlayerStats : MonoBehaviour
     private float CalculateHealthPercentage()
     {
         return health / maxHealth;
+    }
+
+    public void AddGem() {
+        gems++;
+        SetGemUI();
+    }
+
+    public void AddScore(int scoreToAdd) {
+        score += scoreToAdd;
+        SetScoreUI();
+    }
+
+    private void SetGemUI()
+    {
+        gemsCounter.text = "Infinity Stones: " + gems.ToString() + "/5";
+    }
+
+    private void SetScoreUI()
+    {
+        scoreCounter.text = "Score : " + score.ToString();
     }
 }
