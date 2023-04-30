@@ -15,12 +15,13 @@ GameObject:
   - component: {fileID: 3320442905693050926}
   - component: {fileID: 3320442905693050925}
   - component: {fileID: 1584386917}
+  - component: {fileID: 1566112618970290473}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3320442905693050897
 Transform:
@@ -166,6 +167,8 @@ MonoBehaviour:
   maxDamage: 30
   projectileForce: 10
   spawnOffset: {x: 0, y: 0.5, z: 0}
+  laserSound: {fileID: 0}
+  damageMultiplier: 1
 --- !u!50 &1584386917
 Rigidbody2D:
   serializedVersion: 4
@@ -187,3 +190,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1566112618970290473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3320442905693050898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ede3b6325da3b46861ad18497c8c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportImage: {fileID: 0}
+  teleportCooldown: 3
+  freezeImage: {fileID: 0}
+  freezeCooldown: 5
+  freezeDuration: 3
+  realityImage: {fileID: 0}
+  realityCooldown: 5
+  realityControlDuration: 0
+  invincibleImage: {fileID: 0}
+  invincibleCooldown: 6
+  invincibleDuration: 3
+  powerImage: {fileID: 0}
+  powerCooldown: 4
+  increasedDamageMultiplier: 3
+  teleportEffect: {fileID: 0}
+  freezeEffect: {fileID: 0}
+  invincibleEffect: {fileID: 0}
+  realityControlEffect: {fileID: 0}
+  player: {fileID: 3320442905693050898}
+  manaText: {fileID: 0}
+  manaSlider: {fileID: 0}
+  manaRegenRate: 10
+  cooldownTime: 5

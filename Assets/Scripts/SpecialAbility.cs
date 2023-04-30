@@ -6,39 +6,69 @@ using TMPro;
 
 public class SpecialAbility : MonoBehaviour
 {
-    public GameObject teleportEffect;
-    public float teleportDistance;
+    [Header("TeleportAbility")]
+    public Image teleportImage;
+    public float teleportCooldown = 3f;
+    bool isTeleportCooldown = false;
 
-    public GameObject freezeEffect;
+    [Header("FreezeAbility")]
+    public Image freezeImage;
+    public float freezeCooldown = 5f;
     public float freezeDuration;
+    bool isFreezeCooldown = false;
 
+    [Header("RealityAbility")]
+    public Image realityImage;
+    public float realityCooldown = 5f;
+    public float realityControlDuration;
+    bool isRealityCooldown = false;
+
+    [Header("InvincibleAbility")]
+    public Image invincibleImage;
+    public float invincibleCooldown = 6f;
+    public float invincibleDuration;
+    bool isInvincibleCooldown = false;
+
+    [Header("PowerAbility")]
+    public Image powerImage;
+    public float powerCooldown = 4f;
+    bool isPowerCooldown = false;
     public float increasedDamageMultiplier;
 
+    [Header("Effects")]
+    public GameObject teleportEffect;
+    public GameObject freezeEffect;
     public GameObject invincibleEffect;
-    public float invincibleDuration;
-
     public GameObject realityControlEffect;
-    public float realityControlDuration;
+
+    [Header("Mana")]
+    public GameObject player;
+    public TextMeshProUGUI manaText;
+    public Slider manaSlider;
+
+    public float manaRegenRate = 10f;
+    public float cooldownTime = 5f;
+    float mana = 0f;
+    float maxMana = 100f;
+
+    float currentCooldownTime = 0f;
 
     bool isTeleporting = false;
     bool isFreezing = false;
     bool isInvincible = false;
     bool isControllingReality = false;
-
-    float mana = 0f;
-    float maxMana = 100f;
-    public float manaRegenRate = 10f;
-    public float cooldownTime = 5f;
-    float currentCooldownTime = 0f;
-
-    public GameObject player;
-    public TextMeshProUGUI manaText;
-    public Slider manaSlider;
+    bool isPower = false;
 
     void Start() 
     {
         mana = maxMana;
         SetManaUI();
+
+        teleportImage.fillAmount = 1;
+        freezeImage.fillAmount = 1;
+        realityImage.fillAmount = 1;
+        invincibleImage.fillAmount = 1;
+        powerImage.fillAmount = 1;
     }
 
     void Update()
@@ -48,7 +78,7 @@ public class SpecialAbility : MonoBehaviour
         mana = Mathf.Clamp(mana, 0f, maxMana);
 
         // Check if any ability can be activated
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !isTeleporting)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !isTeleporting && !isTeleportCooldown)
         {
             // Teleport ability
             if (mana >= 50f)
@@ -56,45 +86,98 @@ public class SpecialAbility : MonoBehaviour
                 StartCoroutine(Teleport());
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && !isFreezing)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && !isFreezing && !isFreezeCooldown)
         {
             // Freeze ability
             if (mana >= 25f)
             {
                 StartCoroutine(Freeze());
+                isFreezeCooldown = true;
+                freezeImage.fillAmount = 0;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha5) && !isPower && !isPowerCooldown)
         {
             // Increased damage ability
             if (mana >= 30f)
             {
                 StartCoroutine(IncreasedDamage());
+                isPowerCooldown = true;
+                powerImage.fillAmount = 0;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4) && !isInvincible)
+        else if (Input.GetKeyDown(KeyCode.Alpha4) && !isInvincible && !isInvincibleCooldown)
         {
             // Invincibility ability
             if (mana >= 40f)
             {
                 StartCoroutine(Invincibility());
+                isInvincibleCooldown = true;
+                invincibleImage.fillAmount = 0;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha5) && !isControllingReality)
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && !isControllingReality && !isRealityCooldown)
         {
             // Mind control ability
             if (mana >= 50f)
             {
                 StartCoroutine(RealityControl());
+                isRealityCooldown = true;
+                realityImage.fillAmount = 0;
             }
         }
 
-        // Update cooldown timer for abilities
-        if (currentCooldownTime > 0f)
-        {
-            currentCooldownTime -= Time.deltaTime;
-            currentCooldownTime = Mathf.Clamp(currentCooldownTime, 0f, cooldownTime);
+        // Update the cooldown timers
+        //Ability1
+        if(isTeleportCooldown) {
+            teleportImage.fillAmount += 1 / teleportCooldown * Time.deltaTime;
         }
+
+        if(teleportImage.fillAmount == 1) 
+        {
+            isTeleportCooldown = false;
+        }
+
+        //Ability2
+        if(isFreezeCooldown) {
+            freezeImage.fillAmount += 1 / freezeCooldown * Time.deltaTime;
+        }
+
+        if(freezeImage.fillAmount == 1) 
+        {
+            isFreezeCooldown = false;
+        }
+
+        //Ability3
+        if(isRealityCooldown) {
+            realityImage.fillAmount += 1 / realityCooldown * Time.deltaTime;
+        }
+
+        if(realityImage.fillAmount == 1) 
+        {
+            isRealityCooldown = false;
+        }
+
+        //Ability4
+        if(isInvincibleCooldown) {
+            invincibleImage.fillAmount += 1 / invincibleCooldown * Time.deltaTime;
+        }
+
+        if(invincibleImage.fillAmount == 1) 
+        {
+            isInvincibleCooldown = false;
+        }
+
+        //Ability5
+        if(isPowerCooldown) {
+            powerImage.fillAmount += 1 / powerCooldown * Time.deltaTime;
+        }
+
+        if(powerImage.fillAmount == 1) 
+        {
+            isPowerCooldown = false;
+        }
+        
         SetManaUI();
     }
 
@@ -129,6 +212,10 @@ public class SpecialAbility : MonoBehaviour
         if (canTeleport)
         {
             transform.position = targetPos;
+
+            // Set Cooldown
+            isTeleportCooldown = true;
+            teleportImage.fillAmount = 0;
 
             // Reduce mana and start cooldown timer
             mana -= 50f;
