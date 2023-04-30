@@ -118,7 +118,7 @@ public class SpecialAbility : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3) && !isControllingReality && !isRealityCooldown)
         {
-            // Mind control ability
+            // Reality control ability
             if (mana >= 50f)
             {
                 StartCoroutine(RealityControl());
@@ -323,6 +323,8 @@ public class SpecialAbility : MonoBehaviour
 
     IEnumerator IncreasedDamage()
     {
+        isPower = true;
+        mana -= 30f;
         // Set increased damage multiplier for a set duration
         var originalDamageMultiplier = GetComponent<LaserShot>().damageMultiplier;
         GetComponent<LaserShot>().damageMultiplier = increasedDamageMultiplier;
@@ -332,10 +334,9 @@ public class SpecialAbility : MonoBehaviour
 
         // Reset damage multiplier to original value
         GetComponent<LaserShot>().damageMultiplier = originalDamageMultiplier;
-
-        // Reduce mana and start cooldown timer
-        mana -= 30f;
+        
         currentCooldownTime = cooldownTime;
+        isPower = false;
     }
 
     IEnumerator Invincibility()
@@ -362,6 +363,9 @@ public class SpecialAbility : MonoBehaviour
          // Find all enemies with the EnemyAI script
         EnemyAI[] enemiesAI = FindObjectsOfType<EnemyAI>();
 
+        // Original enemy max damage
+        float originalMaxDamage = enemiesAI[0].maxDamage;
+    
         foreach (EnemyAI enemyAI in enemiesAI)
         {
             //if enemy is not destroyed
@@ -369,7 +373,10 @@ public class SpecialAbility : MonoBehaviour
             {
                 continue;
             }
-           
+
+            //make enemies do less damage
+            enemyAI.maxDamage = enemyAI.minDamage;
+            
             //get the sprite renderer of enemyAI
             SpriteRenderer enemySpriteRenderer = enemyAI.GetComponent<SpriteRenderer>();
             Transform parentTransform = enemySpriteRenderer.gameObject.transform;
@@ -399,6 +406,9 @@ public class SpecialAbility : MonoBehaviour
                 continue;
             }
 
+            //put the default EnemyAI maxDamage values back
+            enemyAI.maxDamage = originalMaxDamage;
+
             //get the sprite renderer of enemyAI
             SpriteRenderer enemySpriteRenderer = enemyAI.GetComponent<SpriteRenderer>();
             Transform parentTransform = enemySpriteRenderer.gameObject.transform;
@@ -412,7 +422,6 @@ public class SpecialAbility : MonoBehaviour
          
             //set the child sprite back to inactive
             childSpriteRenderer.enabled = false;
-
         }   
 
         // Start cooldown timer
