@@ -176,30 +176,35 @@ public class SpecialAbility : MonoBehaviour
         isFreezing = true;
         mana -= 25f;
 
-        // Find all GameObjects with the tag "Enemy"
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        // Find all enemies with the EnemyAI script
+        EnemyAI[] enemiesAI = FindObjectsOfType<EnemyAI>();
 
         float oldPatrolRadius = 0f;
         float oldDetectionRange = 0f;
         float oldPatrolSpeed = 0f;
 
+        bool foundOldValues = false;
+
         // Loop through each enemy found and freeze it
-        foreach (GameObject enemy in enemies)
+        foreach (EnemyAI enemyAI in enemiesAI)
         {
             //if enemy is not destroyed
-            if (enemy == null)
+            if (enemyAI == null)
             {
                 continue;
             }
+            
             // Spawn freeze effect at location of enemy
             // Instantiate(freezeEffect, enemy.transform.position, Quaternion.identity, enemy.transform);
-            enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            //enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 
-            //get the EnemyAI script and set the patrolRadius to 0
-            EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
-            oldPatrolRadius = enemyAI.patrolRadius;
-            oldDetectionRange = enemyAI.detectionRange;
-            oldPatrolSpeed = enemyAI.patrolSpeed;
+            if(!foundOldValues) {
+                oldPatrolRadius = enemyAI.patrolRadius;
+                oldDetectionRange = enemyAI.detectionRange;
+                oldPatrolSpeed = enemyAI.patrolSpeed;
+                foundOldValues = true;
+            }
+
             enemyAI.patrolRadius = 0f;
             enemyAI.detectionRange = 0f;
             enemyAI.patrolSpeed = 0f;
@@ -208,25 +213,21 @@ public class SpecialAbility : MonoBehaviour
         // Wait for 3 seconds before unfreezing the enemy
         yield return new WaitForSeconds(3f);
         
-        foreach (GameObject enemy in enemies)
+        foreach (EnemyAI enemyAI in enemiesAI)
         {
             //if enemy is not destroyed
-            if (enemy == null)
+            if (enemyAI == null)
             {
                 continue;
             }
-             enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             
             //put the default EnemyAI values back
-            EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
             enemyAI.patrolRadius = oldPatrolRadius;
             enemyAI.detectionRange = oldDetectionRange;
             enemyAI.patrolSpeed = oldPatrolSpeed;
         }   
-        
 
-        // Reduce mana and start cooldown timer
-        
+        // Start cooldown timer
         currentCooldownTime = cooldownTime;
 
         isFreezing = false;
