@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class SpecialAbility : MonoBehaviour
 {
@@ -28,6 +30,16 @@ public class SpecialAbility : MonoBehaviour
     float manaRegenRate = 20f;
     float cooldownTime = 5f;
     float currentCooldownTime = 0f;
+
+    public GameObject player;
+    public TextMeshProUGUI manaText;
+    public Slider manaSlider;
+
+    void Start() 
+    {
+        mana = maxMana;
+        SetManaUI();
+    }
 
     void Update()
     {
@@ -83,6 +95,18 @@ public class SpecialAbility : MonoBehaviour
             currentCooldownTime -= Time.deltaTime;
             currentCooldownTime = Mathf.Clamp(currentCooldownTime, 0f, cooldownTime);
         }
+        SetManaUI();
+    }
+
+    private void SetManaUI()
+    {
+        manaSlider.value = CalculateManaPercentage();
+        manaText.text = Mathf.Ceil(mana).ToString() + " / " + Mathf.Ceil(maxMana).ToString();
+    }
+
+    private float CalculateManaPercentage()
+    {
+        return mana / maxMana;
     }
 
     IEnumerator Teleport()
