@@ -14,16 +14,12 @@ public class EnemyAI : MonoBehaviour
     private Vector2 initialPosition, target;
     private Vector2 direction;
 
-
     public float timeSinceLastAttack = 0f;
     public float attackCooldown = 2f;
     public GameObject projectile;
     public float minDamage;
     public float maxDamage;
     public float projectileForce;
-
-    private bool mindControl = false;
-
 
     private void Start()
     {
@@ -87,13 +83,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Attack()
     {
-        GameObject player;
-        if(mindControl) {
-            player = GameObject.FindGameObjectWithTag("Enemy");
-        }
-        else {
-            player = GameObject.FindGameObjectWithTag("Player");
-        }
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         if (player == null)
         {
@@ -118,14 +108,9 @@ public class EnemyAI : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             GameObject laserShot = Instantiate(projectile, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
-            laserShot.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+            laserShot.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;           
             laserShot.GetComponent<EnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
             timeSinceLastAttack = 0f;
         }
-    }
-
-    public void SetMindControl(bool state)
-    {
-        mindControl = state;
     }
 }

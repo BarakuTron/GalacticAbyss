@@ -21,6 +21,6 @@ public class EnemyProjectile : MonoBehaviour
                 PlayerStats.playerStats.DealDamage(damage);
             }
             Destroy(gameObject);
-        }
+        } 
     }
 }

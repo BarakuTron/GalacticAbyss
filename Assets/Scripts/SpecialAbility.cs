@@ -17,13 +17,13 @@ public class SpecialAbility : MonoBehaviour
     public GameObject invincibleEffect;
     public float invincibleDuration;
 
-    public GameObject mindControlEffect;
-    public float mindControlDuration;
+    public GameObject realityControlEffect;
+    public float realityControlDuration;
 
     bool isTeleporting = false;
     bool isFreezing = false;
     bool isInvincible = false;
-    bool isMindControlling = false;
+    bool isControllingReality = false;
 
     float mana = 0f;
     float maxMana = 100f;
@@ -80,12 +80,12 @@ public class SpecialAbility : MonoBehaviour
                 StartCoroutine(Invincibility());
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha5) && !isMindControlling)
+        else if (Input.GetKeyDown(KeyCode.Alpha5) && !isControllingReality)
         {
             // Mind control ability
             if (mana >= 50f)
             {
-                StartCoroutine(MindControl());
+                StartCoroutine(RealityControl());
             }
         }
 
@@ -267,9 +267,9 @@ public class SpecialAbility : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator MindControl()
+    IEnumerator RealityControl()
     {
-        isMindControlling = true;
+        isControllingReality = true;
         mana -= 50f;
 
          // Find all enemies with the EnemyAI script
@@ -282,7 +282,23 @@ public class SpecialAbility : MonoBehaviour
             {
                 continue;
             }
-            enemyAI.SetMindControl(true);
+           
+            //get the sprite renderer of enemyAI
+            SpriteRenderer enemySpriteRenderer = enemyAI.GetComponent<SpriteRenderer>();
+            Transform parentTransform = enemySpriteRenderer.gameObject.transform;
+    
+            //get the child sprite render of enemySpriteRenderer
+            Transform childTransform = parentTransform.Find("ChickenSprite");
+            SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
+
+            //set the enemySpriteRenderer to inactive:
+            enemySpriteRenderer.enabled = false;
+         
+            //set the child sprite to active
+            childSpriteRenderer.enabled = true;
+
+            //transform to position of parent sprite
+            childSpriteRenderer.transform.position = enemySpriteRenderer.transform.position;
         }
 
         // Wait for 3 seconds before unfreezing the enemy
@@ -295,14 +311,27 @@ public class SpecialAbility : MonoBehaviour
             {
                 continue;
             }
-            
-            enemyAI.SetMindControl(false);
+
+            //get the sprite renderer of enemyAI
+            SpriteRenderer enemySpriteRenderer = enemyAI.GetComponent<SpriteRenderer>();
+            Transform parentTransform = enemySpriteRenderer.gameObject.transform;
+    
+            //get the child sprite render of enemySpriteRenderer
+            Transform childTransform = parentTransform.Find("ChickenSprite");
+            SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
+
+            //set the enemySpriteRenderer back to active:
+            enemySpriteRenderer.enabled = true;
+         
+            //set the child sprite back to inactive
+            childSpriteRenderer.enabled = false;
+
         }   
 
         // Start cooldown timer
         currentCooldownTime = cooldownTime;
 
-        isMindControlling = false;
+        isControllingReality = false;
         yield return null;
     }
 }
