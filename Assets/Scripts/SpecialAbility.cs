@@ -193,7 +193,7 @@ public class SpecialAbility : MonoBehaviour
             {
                 continue;
             }
-            
+
             // Spawn freeze effect at location of enemy
             // Instantiate(freezeEffect, enemy.transform.position, Quaternion.identity, enemy.transform);
             //enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
@@ -270,27 +270,37 @@ public class SpecialAbility : MonoBehaviour
     IEnumerator MindControl()
     {
         isMindControlling = true;
+        mana -= 50f;
 
-    //     // Spawn mind control effect at location of all enemies
-    //     var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-    //     foreach (var enemy in enemies)
-    //     {
-    //         Instantiate(mindControlEffect, enemy.transform.position, Quaternion.identity, enemy.transform);
-    //     }
+         // Find all enemies with the EnemyAI script
+        EnemyAI[] enemiesAI = FindObjectsOfType<EnemyAI>();
 
-    //     // Force all enemies to target and shoot each other for a set duration
-    //     foreach (var enemy in enemies)
-    //     {
-    //         var enemyController = enemy.GetComponent<EnemyController>();
-    //         if (enemyController != null)
-    //         {
-    //             enemyController.TargetAndShootEachOther(mindControlDuration);
-    //         }
-    //     }
+        foreach (EnemyAI enemyAI in enemiesAI)
+        {
+            //if enemy is not destroyed
+            if (enemyAI == null)
+            {
+                continue;
+            }
+            enemyAI.SetMindControl(true);
+        }
 
-    //     // Reduce mana and start cooldown timer
-    //     mana -= 50f;
-    //     currentCooldownTime = cooldownTime;
+        // Wait for 3 seconds before unfreezing the enemy
+        yield return new WaitForSeconds(3f);
+        
+        foreach (EnemyAI enemyAI in enemiesAI)
+        {
+            //if enemy is not destroyed
+            if (enemyAI == null)
+            {
+                continue;
+            }
+            
+            enemyAI.SetMindControl(false);
+        }   
+
+        // Start cooldown timer
+        currentCooldownTime = cooldownTime;
 
         isMindControlling = false;
         yield return null;

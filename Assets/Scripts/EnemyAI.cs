@@ -22,6 +22,8 @@ public class EnemyAI : MonoBehaviour
     public float maxDamage;
     public float projectileForce;
 
+    private bool mindControl = false;
+
 
     private void Start()
     {
@@ -85,7 +87,14 @@ public class EnemyAI : MonoBehaviour
 
     private void Attack()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player;
+        if(mindControl) {
+            player = GameObject.FindGameObjectWithTag("Enemy");
+        }
+        else {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+
         if (player == null)
         {
             currentState = State.Patrol;
@@ -113,5 +122,10 @@ public class EnemyAI : MonoBehaviour
             laserShot.GetComponent<EnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
             timeSinceLastAttack = 0f;
         }
+    }
+
+    public void SetMindControl(bool state)
+    {
+        mindControl = state;
     }
 }
