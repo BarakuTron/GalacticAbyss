@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3154751081071714529}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 5757970721064745591}
   - component: {fileID: 4658583457722849711}
   - component: {fileID: 2508665062555111835}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3339644793160725862}
   - component: {fileID: 758122631687265742}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320442905693050897, guid: a1d6092123389984bb7567471dc77efb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.180613
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3320442905693050897, guid: a1d6092123389984bb7567471dc77efb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -571,15 +571,13 @@ MonoBehaviour:
   increasedDamageMultiplier: 3
   invincibleEffect: {fileID: 7522983746595286248}
   invincibleDuration: 3
-  mindControlEffect: {fileID: 0}
-  mindControlDuration: 3
+  realityControlEffect: {fileID: 0}
+  realityControlDuration: 0
   manaRegenRate: 10
   cooldownTime: 5
-  player: {fileID: 0}
-  manaText: {fileID: 0}
-  manaSlider: {fileID: 0}
-  chickenSprite: {fileID: 0}
-  chickenSpriteSize: 0.04
+  player: {fileID: 4330407817144247949}
+  manaText: {fileID: 1828255970770800727}
+  manaSlider: {fileID: 4330407815876049553}
 --- !u!4 &4330407817144247950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3320442905693050897, guid: a1d6092123389984bb7567471dc77efb, type: 3}
@@ -706,6 +704,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d29ce90ce253548ad36ae1c0f9b9d8, type: 3}
+--- !u!114 &1828255970770800727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 127827483221631357, guid: f8d29ce90ce253548ad36ae1c0f9b9d8, type: 3}
+  m_PrefabInstance: {fileID: 1772561681658081578}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4330407815876049553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2630618412965891003, guid: f8d29ce90ce253548ad36ae1c0f9b9d8, type: 3}
+  m_PrefabInstance: {fileID: 1772561681658081578}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4330407815928159154 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2630618413047474840, guid: f8d29ce90ce253548ad36ae1c0f9b9d8, type: 3}
@@ -765,6 +785,10 @@ PrefabInstance:
     - target: {fileID: 2277205489519975622, guid: b3c4ebaba3d6f5746918891e4bf47151, type: 3}
       propertyPath: m_Name
       value: LaserSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277205489519975622, guid: b3c4ebaba3d6f5746918891e4bf47151, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2277205489519975622, guid: b3c4ebaba3d6f5746918891e4bf47151, type: 3}
       propertyPath: m_IsActive
