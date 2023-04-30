@@ -27,8 +27,8 @@ public class SpecialAbility : MonoBehaviour
 
     float mana = 0f;
     float maxMana = 100f;
-    float manaRegenRate = 20f;
-    float cooldownTime = 5f;
+    public float manaRegenRate = 10f;
+    public float cooldownTime = 5f;
     float currentCooldownTime = 0f;
 
     public GameObject player;
@@ -174,27 +174,60 @@ public class SpecialAbility : MonoBehaviour
     IEnumerator Freeze()
     {
         isFreezing = true;
+        mana -= 25f;
 
-    //     // Spawn freeze effect at location of all enemies
-    //     var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-    //     foreach (var enemy in enemies)
-    //     {
-    //         Instantiate(freezeEffect, enemy.transform.position, Quaternion.identity, enemy.transform);
-    //     }
+        // Find all GameObjects with the tag "Enemy"
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-    //     // Freeze all enemies for a set duration
-    //     foreach (var enemy in enemies)
-    //     {
-    //         var enemyController = enemy.GetComponent<EnemyController>();
-    //         if (enemyController != null)
-    //         {
-    //             enemyController.Freeze(freezeDuration);
-    //         }
-    //     }
+        float oldPatrolRadius = 0f;
+        float oldDetectionRange = 0f;
+        float oldPatrolSpeed = 0f;
 
-    //     // Reduce mana and start cooldown timer
-    //     mana -= 25f;
-    //     currentCooldownTime = cooldownTime;
+        // Loop through each enemy found and freeze it
+        foreach (GameObject enemy in enemies)
+        {
+            //if enemy is not destroyed
+            if (enemy == null)
+            {
+                continue;
+            }
+            // Spawn freeze effect at location of enemy
+            // Instantiate(freezeEffect, enemy.transform.position, Quaternion.identity, enemy.transform);
+            enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
+            //get the EnemyAI script and set the patrolRadius to 0
+            EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
+            oldPatrolRadius = enemyAI.patrolRadius;
+            oldDetectionRange = enemyAI.detectionRange;
+            oldPatrolSpeed = enemyAI.patrolSpeed;
+            enemyAI.patrolRadius = 0f;
+            enemyAI.detectionRange = 0f;
+            enemyAI.patrolSpeed = 0f;
+        }
+        
+        // Wait for 3 seconds before unfreezing the enemy
+        yield return new WaitForSeconds(3f);
+        
+        foreach (GameObject enemy in enemies)
+        {
+            //if enemy is not destroyed
+            if (enemy == null)
+            {
+                continue;
+            }
+             enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            
+            //put the default EnemyAI values back
+            EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
+            enemyAI.patrolRadius = oldPatrolRadius;
+            enemyAI.detectionRange = oldDetectionRange;
+            enemyAI.patrolSpeed = oldPatrolSpeed;
+        }   
+        
+
+        // Reduce mana and start cooldown timer
+        
+        currentCooldownTime = cooldownTime;
 
         isFreezing = false;
         yield return null;
@@ -220,19 +253,16 @@ public class SpecialAbility : MonoBehaviour
     IEnumerator Invincibility()
     {
         isInvincible = true;
+        mana -= 40f;
 
         // Spawn invincibility effect on player
         Instantiate(invincibleEffect, transform.position, Quaternion.identity, transform);
 
-        // Set player invincible for a set duration
-        // GetComponent<PlayerMovement>().SetInvincible(invincibleDuration);
-        PlayerStats.playerStats.SetInvincible(true);
-        yield return new WaitForSeconds(3f);
-        PlayerStats.playerStats.SetInvincible(false);
-
-        // Reduce mana and start cooldown timer
-        mana -= 40f;
+        PlayerStats.playerStats.SetInvincible(3f);
+        
+        // Start cooldown timer
         currentCooldownTime = cooldownTime;
+        isInvincible = false;
         yield return null;
     }
 

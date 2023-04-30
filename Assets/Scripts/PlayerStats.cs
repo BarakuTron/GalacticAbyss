@@ -110,8 +110,23 @@ public class PlayerStats : MonoBehaviour
         scoreCounter.text = "Score : " + score.ToString();
     }
 
-    public void SetInvincible(bool invincible)
+    // public void SetInvincible(bool status)
+    // {
+    //     isInvincible = status;
+    //     //StartCoroutine(Invincible(timeDuration));
+    // }
+
+    IEnumerator Invincibility(float timeDuration)
     {
-        isInvincible = invincible;
+        isInvincible = true;
+        yield return new WaitForSeconds(timeDuration);
+        isInvincible = false;
+    }
+
+    public void SetInvincible(float timeDuration)
+    {
+        if(!isInvincible) {
+            StartCoroutine(Invincibility(timeDuration));
+        }
     }
 }
