@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -93,6 +94,12 @@ public class PlayerStats : MonoBehaviour
     public void AddGem() {
         gems++;
         SetGemUI();
+
+        //find the player SpecialAbility script
+        SpecialAbility specialAbility = player.GetComponent<SpecialAbility>();
+
+        //call UpdateAbilities, send the current scene number as parameter
+        specialAbility.UpdateAbilities(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void AddScore(int scoreToAdd) {

@@ -62,6 +62,12 @@ public class SpecialAbility : MonoBehaviour
     bool isControllingReality = false;
     bool isPower = false;
 
+    bool teleportUnlocked;
+    bool freezeUnlocked;
+    bool realityUnlocked;
+    bool invincibleUnlocked;
+    bool powerUnlocked;
+
     void Start() 
     {
         mana = maxMana;
@@ -72,6 +78,18 @@ public class SpecialAbility : MonoBehaviour
         realityImage.fillAmount = 1;
         invincibleImage.fillAmount = 1;
         powerImage.fillAmount = 1;
+
+        teleportUnlocked = false;
+        freezeUnlocked = false;
+        realityUnlocked = false;
+        invincibleUnlocked = false;
+        powerUnlocked = false;
+
+        teleportImage.gameObject.SetActive(false);
+        freezeImage.gameObject.SetActive(false);
+        realityImage.gameObject.SetActive(false);
+        invincibleImage.gameObject.SetActive(false);
+        powerImage.gameObject.SetActive(false);
     }
 
     void Update()
@@ -81,7 +99,7 @@ public class SpecialAbility : MonoBehaviour
         mana = Mathf.Clamp(mana, 0f, maxMana);
 
         // Check if any ability can be activated
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !isTeleporting && !isTeleportCooldown)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !isTeleporting && !isTeleportCooldown && teleportUnlocked)
         {
             // Teleport ability
             if (mana >= teleportManaCost)
@@ -89,7 +107,7 @@ public class SpecialAbility : MonoBehaviour
                 StartCoroutine(Teleport());
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && !isFreezing && !isFreezeCooldown)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && !isFreezing && !isFreezeCooldown && freezeUnlocked)
         {
             // Freeze ability
             if (mana >= freezeManaCost)
@@ -99,7 +117,7 @@ public class SpecialAbility : MonoBehaviour
                 freezeImage.fillAmount = 0;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha5) && !isPower && !isPowerCooldown)
+        else if (Input.GetKeyDown(KeyCode.Alpha5) && !isPower && !isPowerCooldown && powerUnlocked)
         {
             // Increased damage ability
             if (mana >= powerManaCost)
@@ -109,7 +127,7 @@ public class SpecialAbility : MonoBehaviour
                 powerImage.fillAmount = 0;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4) && !isInvincible && !isInvincibleCooldown)
+        else if (Input.GetKeyDown(KeyCode.Alpha4) && !isInvincible && !isInvincibleCooldown && invincibleUnlocked)
         {
             // Invincibility ability
             if (mana >= invincibleManaCost)
@@ -119,7 +137,7 @@ public class SpecialAbility : MonoBehaviour
                 invincibleImage.fillAmount = 0;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3) && !isControllingReality && !isRealityCooldown)
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && !isControllingReality && !isRealityCooldown && realityUnlocked)
         {
             // Reality control ability
             if (mana >= realityManaCost)
@@ -422,5 +440,31 @@ public class SpecialAbility : MonoBehaviour
         isControllingReality = false;
         yield return null;
     }
+
+    // Unlocks abilities when collecting gems
+    public void UpdateAbilities(int sceneIndex) {
+        if (sceneIndex == 1) {
+            teleportUnlocked = true;
+            teleportImage.gameObject.SetActive(true);
+        }
+        if (sceneIndex == 2) {
+            freezeUnlocked = true;
+            freezeImage.gameObject.SetActive(true);
+        }
+        if (sceneIndex == 3) {
+            realityUnlocked = true;
+            realityImage.gameObject.SetActive(true);
+        }
+        if (sceneIndex == 4) {
+            invincibleUnlocked = true;
+            invincibleImage.gameObject.SetActive(true);
+        }
+        if (sceneIndex == 5) {
+            powerUnlocked = true;
+            powerImage.gameObject.SetActive(true);
+        }
+    }
+
+
 }
 
