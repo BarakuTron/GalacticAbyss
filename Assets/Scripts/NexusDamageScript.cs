@@ -24,6 +24,9 @@ public class NexusDamageScript : EnemyReceiveDamage
     {
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
         Destroy(gameObject);
+        //find a GameManager tagged element
+        GameObject gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        gameManager.GetComponent<PlayerStats>().WinGame();
     }
 
     private void CheckDeath()

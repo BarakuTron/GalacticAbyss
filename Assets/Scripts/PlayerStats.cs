@@ -25,6 +25,7 @@ public class PlayerStats : MonoBehaviour
     public PlayerHitSound hitSound;
 
     public GameOverScreen gameOverScreen;
+    public GameWinScreen gameWinScreen;
 
     private bool isInvincible = false;
 
@@ -138,5 +139,9 @@ public class PlayerStats : MonoBehaviour
         if(!isInvincible) {
             StartCoroutine(Invincibility(timeDuration));
         }
+    }
+
+    public void WinGame() {
+        gameWinScreen.Setup(score);
     }
 }
