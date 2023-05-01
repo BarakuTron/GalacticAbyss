@@ -24,6 +24,8 @@ public class PlayerStats : MonoBehaviour
 
     public PlayerHitSound hitSound;
 
+    public GameOverScreen gameOverScreen;
+
     private bool isInvincible = false;
 
     void Awake()
@@ -83,6 +85,7 @@ public class PlayerStats : MonoBehaviour
         {
             health = 0;
             Destroy(player);
+            gameOverScreen.Setup(score);
         }
     }
 
