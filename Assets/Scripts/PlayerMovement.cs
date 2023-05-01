@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move() {
         transform.Translate(direction * speed * Time.deltaTime);
+        
+        // Lock the z-rotation
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
 
         if(direction.x != 0 || direction.y != 0) {
             SetAnimationMovement(direction);
