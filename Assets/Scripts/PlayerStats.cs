@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class PlayerStats : MonoBehaviour
     public TextMeshProUGUI scoreCounter;
 
     public PlayerHitSound hitSound;
+
+    private bool isInvincible = false;
 
     void Awake()
     {
@@ -44,10 +47,13 @@ public class PlayerStats : MonoBehaviour
 
     public void DealDamage(float damage)
     {
-        hitSound.PlaySound();
-        health -= damage;
-        CheckDeath();
-        SetHealthUI();
+        if(!isInvincible) 
+        {
+            hitSound.PlaySound();
+            health -= damage;
+            CheckDeath();
+            SetHealthUI();
+        }
     }
 
     public void HealCharacter(float heal)
@@ -88,6 +94,12 @@ public class PlayerStats : MonoBehaviour
     public void AddGem() {
         gems++;
         SetGemUI();
+
+        //find the player SpecialAbility script
+        SpecialAbility specialAbility = player.GetComponent<SpecialAbility>();
+
+        //call UpdateAbilities, send the current scene number as parameter
+        specialAbility.UpdateAbilities(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void AddScore(int scoreToAdd) {
@@ -103,5 +115,25 @@ public class PlayerStats : MonoBehaviour
     private void SetScoreUI()
     {
         scoreCounter.text = "Score : " + score.ToString();
+    }
+
+    // public void SetInvincible(bool status)
+    // {
+    //     isInvincible = status;
+    //     //StartCoroutine(Invincible(timeDuration));
+    // }
+
+    IEnumerator Invincibility(float timeDuration)
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(timeDuration);
+        isInvincible = false;
+    }
+
+    public void SetInvincible(float timeDuration)
+    {
+        if(!isInvincible) {
+            StartCoroutine(Invincibility(timeDuration));
+        }
     }
 }

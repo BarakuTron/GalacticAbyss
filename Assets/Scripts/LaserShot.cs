@@ -13,6 +13,7 @@ public class LaserShot : MonoBehaviour
 
     private Vector2 initialMousePos;
     public LaserSoundScript laserSound;
+    public float damageMultiplier = 1;
 
     void Update()
     {
@@ -28,7 +29,7 @@ public class LaserShot : MonoBehaviour
 
             GameObject laserShot = Instantiate(projectile, transform.position + spawnOffset, Quaternion.AngleAxis(angle, Vector3.forward));
             laserShot.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
-            laserShot.GetComponent<Projectile>().damage = Random.Range(minDamage, maxDamage);
+            laserShot.GetComponent<Projectile>().damage = Random.Range(minDamage, maxDamage) * damageMultiplier;
             laserSound.PlaySound();
         }
     }

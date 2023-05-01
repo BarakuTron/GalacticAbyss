@@ -11,6 +11,7 @@ TagManager:
   - RedPortal
   - GreenPortal
   - BluePortal
+  - Map
   layers:
   - Default
   - TransparentFX
