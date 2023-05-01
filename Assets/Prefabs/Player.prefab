@@ -204,18 +204,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportImage: {fileID: 0}
   teleportCooldown: 3
+  teleportManaCost: 30
   freezeImage: {fileID: 0}
   freezeCooldown: 5
+  freezeManaCost: 50
   freezeDuration: 3
   realityImage: {fileID: 0}
   realityCooldown: 5
-  realityControlDuration: 0
+  realityManaCost: 20
+  realityControlDuration: 3
   invincibleImage: {fileID: 0}
   invincibleCooldown: 6
+  invincibleManaCost: 50
   invincibleDuration: 3
   powerImage: {fileID: 0}
   powerCooldown: 4
-  increasedDamageMultiplier: 3
+  powerManaCost: 40
+  powerDuration: 3
+  increasedDamageMultiplier: 1.5
   teleportEffect: {fileID: 0}
   freezeEffect: {fileID: 0}
   invincibleEffect: {fileID: 0}
@@ -224,4 +230,3 @@ MonoBehaviour:
   manaText: {fileID: 0}
   manaSlider: {fileID: 0}
   manaRegenRate: 10
-  cooldownTime: 5

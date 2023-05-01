@@ -9,31 +9,37 @@ public class SpecialAbility : MonoBehaviour
     [Header("TeleportAbility")]
     public Image teleportImage;
     public float teleportCooldown = 3f;
+    public float teleportManaCost = 30f;
     bool isTeleportCooldown = false;
 
     [Header("FreezeAbility")]
     public Image freezeImage;
     public float freezeCooldown = 5f;
-    public float freezeDuration;
+    public float freezeManaCost = 50f;
+    public float freezeDuration = 3f;
     bool isFreezeCooldown = false;
 
     [Header("RealityAbility")]
     public Image realityImage;
     public float realityCooldown = 5f;
-    public float realityControlDuration;
+    public float realityManaCost = 20f;
+    public float realityControlDuration = 3f;
     bool isRealityCooldown = false;
 
     [Header("InvincibleAbility")]
     public Image invincibleImage;
     public float invincibleCooldown = 6f;
-    public float invincibleDuration;
+    public float invincibleManaCost = 50f;
+    public float invincibleDuration = 3f;
     bool isInvincibleCooldown = false;
 
     [Header("PowerAbility")]
     public Image powerImage;
     public float powerCooldown = 4f;
+    public float powerManaCost = 40f;
+    public float powerDuration = 3f;
+    public float increasedDamageMultiplier = 1.5f;
     bool isPowerCooldown = false;
-    public float increasedDamageMultiplier;
 
     [Header("Effects")]
     public GameObject teleportEffect;
@@ -47,11 +53,8 @@ public class SpecialAbility : MonoBehaviour
     public Slider manaSlider;
 
     public float manaRegenRate = 10f;
-    public float cooldownTime = 5f;
     float mana = 0f;
     float maxMana = 100f;
-
-    float currentCooldownTime = 0f;
 
     bool isTeleporting = false;
     bool isFreezing = false;
@@ -81,7 +84,7 @@ public class SpecialAbility : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && !isTeleporting && !isTeleportCooldown)
         {
             // Teleport ability
-            if (mana >= 50f)
+            if (mana >= teleportManaCost)
             {
                 StartCoroutine(Teleport());
             }
@@ -89,7 +92,7 @@ public class SpecialAbility : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha2) && !isFreezing && !isFreezeCooldown)
         {
             // Freeze ability
-            if (mana >= 25f)
+            if (mana >= freezeManaCost)
             {
                 StartCoroutine(Freeze());
                 isFreezeCooldown = true;
@@ -99,7 +102,7 @@ public class SpecialAbility : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha5) && !isPower && !isPowerCooldown)
         {
             // Increased damage ability
-            if (mana >= 30f)
+            if (mana >= powerManaCost)
             {
                 StartCoroutine(IncreasedDamage());
                 isPowerCooldown = true;
@@ -109,7 +112,7 @@ public class SpecialAbility : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha4) && !isInvincible && !isInvincibleCooldown)
         {
             // Invincibility ability
-            if (mana >= 40f)
+            if (mana >= invincibleManaCost)
             {
                 StartCoroutine(Invincibility());
                 isInvincibleCooldown = true;
@@ -119,7 +122,7 @@ public class SpecialAbility : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha3) && !isControllingReality && !isRealityCooldown)
         {
             // Reality control ability
-            if (mana >= 50f)
+            if (mana >= realityManaCost)
             {
                 StartCoroutine(RealityControl());
                 isRealityCooldown = true;
@@ -197,8 +200,7 @@ public class SpecialAbility : MonoBehaviour
         isTeleporting = true;
 
         // Spawn teleport effect at current position
-        Instantiate(teleportEffect, transform.position, Quaternion.identity);
-
+        // Instantiate(teleportEffect, transform.position, Quaternion.identity);
 
         // Get the destination position of the teleport
         Vector3 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -218,8 +220,7 @@ public class SpecialAbility : MonoBehaviour
             teleportImage.fillAmount = 0;
 
             // Reduce mana and start cooldown timer
-            mana -= 50f;
-            currentCooldownTime = cooldownTime;
+            mana -= teleportManaCost;
         }
 
         isTeleporting = false;
@@ -257,11 +258,10 @@ public class SpecialAbility : MonoBehaviour
         return false;
     }
 
-
     IEnumerator Freeze()
     {
         isFreezing = true;
-        mana -= 25f;
+        mana -= freezeManaCost;
 
         // Find all enemies with the EnemyAI script
         EnemyAI[] enemiesAI = FindObjectsOfType<EnemyAI>();
@@ -297,8 +297,8 @@ public class SpecialAbility : MonoBehaviour
             enemyAI.patrolSpeed = 0f;
         }
         
-        // Wait for 3 seconds before unfreezing the enemy
-        yield return new WaitForSeconds(3f);
+        // Wait before unfreezing the enemy
+        yield return new WaitForSeconds(freezeDuration);
         
         foreach (EnemyAI enemyAI in enemiesAI)
         {
@@ -314,9 +314,6 @@ public class SpecialAbility : MonoBehaviour
             enemyAI.patrolSpeed = oldPatrolSpeed;
         }   
 
-        // Start cooldown timer
-        currentCooldownTime = cooldownTime;
-
         isFreezing = false;
         yield return null;
     }
@@ -324,33 +321,31 @@ public class SpecialAbility : MonoBehaviour
     IEnumerator IncreasedDamage()
     {
         isPower = true;
-        mana -= 30f;
+        mana -= powerManaCost;
+
         // Set increased damage multiplier for a set duration
         var originalDamageMultiplier = GetComponent<LaserShot>().damageMultiplier;
         GetComponent<LaserShot>().damageMultiplier = increasedDamageMultiplier;
 
         // Wait for a set duration
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(powerDuration);
 
         // Reset damage multiplier to original value
         GetComponent<LaserShot>().damageMultiplier = originalDamageMultiplier;
         
-        currentCooldownTime = cooldownTime;
         isPower = false;
     }
 
     IEnumerator Invincibility()
     {
         isInvincible = true;
-        mana -= 40f;
+        mana -= invincibleManaCost;
 
         // Spawn invincibility effect on player
-        Instantiate(invincibleEffect, transform.position, Quaternion.identity, transform);
+        //Instantiate(invincibleEffect, transform.position, Quaternion.identity, transform);
 
-        PlayerStats.playerStats.SetInvincible(3f);
+        PlayerStats.playerStats.SetInvincible(invincibleDuration);
         
-        // Start cooldown timer
-        currentCooldownTime = cooldownTime;
         isInvincible = false;
         yield return null;
     }
@@ -358,7 +353,7 @@ public class SpecialAbility : MonoBehaviour
     IEnumerator RealityControl()
     {
         isControllingReality = true;
-        mana -= 50f;
+        mana -= realityManaCost;
 
          // Find all enemies with the EnemyAI script
         EnemyAI[] enemiesAI = FindObjectsOfType<EnemyAI>();
@@ -395,8 +390,8 @@ public class SpecialAbility : MonoBehaviour
             childSpriteRenderer.transform.position = enemySpriteRenderer.transform.position;
         }
 
-        // Wait for 3 seconds before unfreezing the enemy
-        yield return new WaitForSeconds(3f);
+        // Wait before making the enemy normal again
+        yield return new WaitForSeconds(realityControlDuration);
         
         foreach (EnemyAI enemyAI in enemiesAI)
         {
@@ -423,9 +418,6 @@ public class SpecialAbility : MonoBehaviour
             //set the child sprite back to inactive
             childSpriteRenderer.enabled = false;
         }   
-
-        // Start cooldown timer
-        currentCooldownTime = cooldownTime;
 
         isControllingReality = false;
         yield return null;
