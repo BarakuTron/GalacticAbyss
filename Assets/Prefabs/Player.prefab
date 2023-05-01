@@ -230,3 +230,4 @@ MonoBehaviour:
   manaText: {fileID: 0}
   manaSlider: {fileID: 0}
   manaRegenRate: 10
+  abilityUIText: {fileID: 0}

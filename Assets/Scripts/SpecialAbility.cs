@@ -56,6 +56,9 @@ public class SpecialAbility : MonoBehaviour
     float mana = 0f;
     float maxMana = 100f;
 
+    [Header("Other")]
+    public TextMeshProUGUI abilityUIText;
+
     bool isTeleporting = false;
     bool isFreezing = false;
     bool isInvincible = false;
@@ -90,6 +93,8 @@ public class SpecialAbility : MonoBehaviour
         realityImage.gameObject.SetActive(false);
         invincibleImage.gameObject.SetActive(false);
         powerImage.gameObject.SetActive(false);
+
+        abilityUIText.gameObject.SetActive(false);
     }
 
     void Update()
@@ -376,66 +381,70 @@ public class SpecialAbility : MonoBehaviour
          // Find all enemies with the EnemyAI script
         EnemyAI[] enemiesAI = FindObjectsOfType<EnemyAI>();
 
-        // Original enemy max damage
-        float originalMaxDamage = enemiesAI[0].maxDamage;
-    
-        foreach (EnemyAI enemyAI in enemiesAI)
+        //check if enemiesAi array is empty
+        if (enemiesAI.Length != 0)
         {
-            //if enemy is not destroyed
-            if (enemyAI == null)
+            // Original enemy max damage
+            float originalMaxDamage = enemiesAI[0].maxDamage;
+       
+            foreach (EnemyAI enemyAI in enemiesAI)
             {
-                continue;
-            }
+                //if enemy is not destroyed
+                if (enemyAI == null)
+                {
+                    continue;
+                }
 
-            //make enemies do less damage
-            enemyAI.maxDamage = enemyAI.minDamage;
-            
-            //get the sprite renderer of enemyAI
-            SpriteRenderer enemySpriteRenderer = enemyAI.GetComponent<SpriteRenderer>();
-            Transform parentTransform = enemySpriteRenderer.gameObject.transform;
-    
-            //get the child sprite render of enemySpriteRenderer
-            Transform childTransform = parentTransform.Find("ChickenSprite");
-            SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
-
-            //set the enemySpriteRenderer to inactive:
-            enemySpriteRenderer.enabled = false;
-         
-            //set the child sprite to active
-            childSpriteRenderer.enabled = true;
-
-            //transform to position of parent sprite
-            childSpriteRenderer.transform.position = enemySpriteRenderer.transform.position;
-        }
-
-        // Wait before making the enemy normal again
-        yield return new WaitForSeconds(realityControlDuration);
+                //make enemies do less damage
+                enemyAI.maxDamage = enemyAI.minDamage;
+                
+                //get the sprite renderer of enemyAI
+                SpriteRenderer enemySpriteRenderer = enemyAI.GetComponent<SpriteRenderer>();
+                Transform parentTransform = enemySpriteRenderer.gameObject.transform;
         
-        foreach (EnemyAI enemyAI in enemiesAI)
-        {
-            //if enemy is not destroyed
-            if (enemyAI == null)
-            {
-                continue;
+                //get the child sprite render of enemySpriteRenderer
+                Transform childTransform = parentTransform.Find("ChickenSprite");
+                SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
+
+                //set the enemySpriteRenderer to inactive:
+                enemySpriteRenderer.enabled = false;
+            
+                //set the child sprite to active
+                childSpriteRenderer.enabled = true;
+
+                //transform to position of parent sprite
+                childSpriteRenderer.transform.position = enemySpriteRenderer.transform.position;
             }
 
-            //put the default EnemyAI maxDamage values back
-            enemyAI.maxDamage = originalMaxDamage;
+            // Wait before making the enemy normal again
+            yield return new WaitForSeconds(realityControlDuration);
+            
+            foreach (EnemyAI enemyAI in enemiesAI)
+            {
+                //if enemy is not destroyed
+                if (enemyAI == null)
+                {
+                    continue;
+                }
 
-            //get the sprite renderer of enemyAI
-            SpriteRenderer enemySpriteRenderer = enemyAI.GetComponent<SpriteRenderer>();
-            Transform parentTransform = enemySpriteRenderer.gameObject.transform;
-    
-            //get the child sprite render of enemySpriteRenderer
-            Transform childTransform = parentTransform.Find("ChickenSprite");
-            SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
+                //put the default EnemyAI maxDamage values back
+                enemyAI.maxDamage = originalMaxDamage;
 
-            //set the enemySpriteRenderer back to active:
-            enemySpriteRenderer.enabled = true;
-         
-            //set the child sprite back to inactive
-            childSpriteRenderer.enabled = false;
-        }   
+                //get the sprite renderer of enemyAI
+                SpriteRenderer enemySpriteRenderer = enemyAI.GetComponent<SpriteRenderer>();
+                Transform parentTransform = enemySpriteRenderer.gameObject.transform;
+        
+                //get the child sprite render of enemySpriteRenderer
+                Transform childTransform = parentTransform.Find("ChickenSprite");
+                SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
+
+                //set the enemySpriteRenderer back to active:
+                enemySpriteRenderer.enabled = true;
+            
+                //set the child sprite back to inactive
+                childSpriteRenderer.enabled = false;
+            }   
+        }
 
         isControllingReality = false;
         yield return null;
@@ -446,25 +455,40 @@ public class SpecialAbility : MonoBehaviour
         if (sceneIndex == 1) {
             teleportUnlocked = true;
             teleportImage.gameObject.SetActive(true);
+            abilityUIText.text = "Ability Unlocked: Teleport (Press 1)";
+            StartCoroutine(ShowAbilityText(abilityUIText));
         }
         if (sceneIndex == 2) {
             freezeUnlocked = true;
             freezeImage.gameObject.SetActive(true);
+            abilityUIText.text = "Ability Unlocked: Freeze (Press 2)";
+            StartCoroutine(ShowAbilityText(abilityUIText));
         }
         if (sceneIndex == 3) {
             realityUnlocked = true;
             realityImage.gameObject.SetActive(true);
+            abilityUIText.text = "Ability Unlocked: Reality Control (Press 3)";
+            StartCoroutine(ShowAbilityText(abilityUIText));
         }
         if (sceneIndex == 4) {
             invincibleUnlocked = true;
             invincibleImage.gameObject.SetActive(true);
+            abilityUIText.text = "Ability Unlocked: Invincibility (Press 4)";
+            StartCoroutine(ShowAbilityText(abilityUIText));
         }
         if (sceneIndex == 5) {
             powerUnlocked = true;
             powerImage.gameObject.SetActive(true);
+            abilityUIText.text = "Ability Unlocked: Increased Damage (Press 5)";
+            StartCoroutine(ShowAbilityText(abilityUIText));
         }
     }
 
+    IEnumerator ShowAbilityText(TextMeshProUGUI abilityUIText) {
+        abilityUIText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        abilityUIText.gameObject.SetActive(false);
+    }
 
 }
 

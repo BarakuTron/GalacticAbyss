@@ -510,6 +510,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 402431642008144686}
     - target: {fileID: 1566112618970290473, guid: a1d6092123389984bb7567471dc77efb, type: 3}
+      propertyPath: abilityUIText
+      value: 
+      objectReference: {fileID: 3567352984904340458}
+    - target: {fileID: 1566112618970290473, guid: a1d6092123389984bb7567471dc77efb, type: 3}
       propertyPath: teleportImage
       value: 
       objectReference: {fileID: 6994672794290875473}
@@ -700,6 +704,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2961310092346385088, guid: f8d29ce90ce253548ad36ae1c0f9b9d8, type: 3}
+      propertyPath: m_text
+      value: New Ability Unlocked
+      objectReference: {fileID: 0}
     - target: {fileID: 3152886028496267111, guid: f8d29ce90ce253548ad36ae1c0f9b9d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -748,6 +756,17 @@ MonoBehaviour:
 --- !u!114 &1828255970770800727 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 127827483221631357, guid: f8d29ce90ce253548ad36ae1c0f9b9d8, type: 3}
+  m_PrefabInstance: {fileID: 1772561681658081578}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3567352984904340458 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2961310092346385088, guid: f8d29ce90ce253548ad36ae1c0f9b9d8, type: 3}
   m_PrefabInstance: {fileID: 1772561681658081578}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
