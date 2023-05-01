@@ -12,6 +12,7 @@ TagManager:
   - GreenPortal
   - BluePortal
   - Map
+  - GameManager
   layers:
   - Default
   - TransparentFX
