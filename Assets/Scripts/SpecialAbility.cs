@@ -452,31 +452,31 @@ public class SpecialAbility : MonoBehaviour
 
     // Unlocks abilities when collecting gems
     public void UpdateAbilities(int sceneIndex) {
-        if (sceneIndex == 1) {
+        if (sceneIndex == 2) {
             teleportUnlocked = true;
             teleportImage.gameObject.SetActive(true);
             abilityUIText.text = "Ability Unlocked: Teleport (Press 1)";
             StartCoroutine(ShowAbilityText(abilityUIText));
         }
-        if (sceneIndex == 2) {
+        if (sceneIndex == 3) {
             freezeUnlocked = true;
             freezeImage.gameObject.SetActive(true);
             abilityUIText.text = "Ability Unlocked: Freeze (Press 2)";
             StartCoroutine(ShowAbilityText(abilityUIText));
         }
-        if (sceneIndex == 3) {
+        if (sceneIndex == 4) {
             realityUnlocked = true;
             realityImage.gameObject.SetActive(true);
             abilityUIText.text = "Ability Unlocked: Reality Control (Press 3)";
             StartCoroutine(ShowAbilityText(abilityUIText));
         }
-        if (sceneIndex == 4) {
+        if (sceneIndex == 5) {
             invincibleUnlocked = true;
             invincibleImage.gameObject.SetActive(true);
             abilityUIText.text = "Ability Unlocked: Invincibility (Press 4)";
             StartCoroutine(ShowAbilityText(abilityUIText));
         }
-        if (sceneIndex == 5) {
+        if (sceneIndex == 6) {
             powerUnlocked = true;
             powerImage.gameObject.SetActive(true);
             abilityUIText.text = "Ability Unlocked: Increased Damage (Press 5)";
