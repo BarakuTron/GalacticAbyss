@@ -252,21 +252,19 @@ public class SpecialAbility : MonoBehaviour
 
     private bool CanTeleport()
     {
-        // Get the position of the mouse in world space
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    // Get the position of the mouse in world space
+    Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        // Find the first object with the "Map" tag and get its sprite renderer component
-        GameObject mapObject = GameObject.FindGameObjectWithTag("Map");
-        if (mapObject == null)
-        {
-            Debug.LogWarning("No objects found with tag 'Map'");
-            return false;
-        }
+    // Find all objects with the "Map" tag and loop through them
+    GameObject[] mapObjects = GameObject.FindGameObjectsWithTag("Map");
+    foreach (GameObject mapObject in mapObjects)
+    {
+        // Get the sprite renderer component of the current map object
         SpriteRenderer mapSprite = mapObject.GetComponent<SpriteRenderer>();
         if (mapSprite == null)
         {
             Debug.LogWarning("Object with tag 'Map' does not have a SpriteRenderer component");
-            return false;
+            continue;
         }
 
         // Check if the mouse position is inside the bounds of the map sprite
@@ -277,9 +275,10 @@ public class SpecialAbility : MonoBehaviour
         {
             return true;
         }
-
-        return false;
     }
+    return false;
+}
+
 
     IEnumerator Freeze()
     {
