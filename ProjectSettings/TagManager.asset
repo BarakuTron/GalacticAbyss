@@ -13,6 +13,7 @@ TagManager:
   - BluePortal
   - Map
   - GameManager
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 
