@@ -33,6 +33,7 @@ public class NexusAI : MonoBehaviour
         currentState = State.Patrol;
         initialPosition = transform.position;
         GetNewPatrolTarget();
+        InvokeRepeating("SpecialAttack", 0f, 5f);
     }
 
     private void Update()
@@ -132,4 +133,18 @@ public class NexusAI : MonoBehaviour
             timeSinceLastAttack = 0f;
         }
     }
+
+    private void SpecialAttack()
+    {
+        int numProjectiles = 16;
+        float angleStep = 360f / numProjectiles;
+
+        for (int i = 0; i < numProjectiles; i++)
+        {
+            GameObject laserShot = Instantiate(projectile, transform.position, Quaternion.identity);
+            laserShot.GetComponent<Rigidbody2D>().velocity = Quaternion.AngleAxis(angleStep * i, Vector3.forward) * Vector2.right * projectileForce;
+            laserShot.GetComponent<EnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
+        }
+    }
+
 }
