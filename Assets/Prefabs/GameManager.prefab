@@ -2391,7 +2391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320442905693050925, guid: a1d6092123389984bb7567471dc77efb, type: 3}
       propertyPath: minDamage
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3320442905693050925, guid: a1d6092123389984bb7567471dc77efb, type: 3}
       propertyPath: laserSound
