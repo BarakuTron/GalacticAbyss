@@ -458,11 +458,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 431731216, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
       propertyPath: maxDamage
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 431731216, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
       propertyPath: minDamage
-      value: 10
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 431731216, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
+      propertyPath: attackCooldown
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 431731216, guid: 02b61e4a839f68d44b84b267516c0d68, type: 3}
       propertyPath: detectionRange

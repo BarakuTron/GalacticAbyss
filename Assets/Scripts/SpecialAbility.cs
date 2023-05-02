@@ -231,7 +231,6 @@ public class SpecialAbility : MonoBehaviour
 
         bool canTeleport = false;
         canTeleport = CanTeleport();
-        Debug.Log(canTeleport);
     
         // Teleport the player if collision check passed
         if (canTeleport)

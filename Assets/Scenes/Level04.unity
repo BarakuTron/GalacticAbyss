@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (27)
@@ -200,6 +212,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (26)
@@ -270,6 +294,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (29)
@@ -280,11 +316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.58
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.573141
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4756,6 +4792,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (23)
@@ -4766,11 +4814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.7
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.31314
+      value: -39.1
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4818,6 +4866,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (28)
@@ -4880,6 +4940,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (09)
@@ -4902,7 +4974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.43314
+      value: -41
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5148,6 +5220,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (22)
@@ -5158,11 +5242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.38
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -35.533142
+      value: -34.8
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5210,6 +5294,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (55)
@@ -5220,11 +5316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.3
+      value: -32.7
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.4
+      value: -41
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5272,6 +5368,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (25)
@@ -5334,6 +5442,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (53)
@@ -5344,11 +5464,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.8
+      value: -36
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -38.8
+      value: -38.9
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5396,6 +5516,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (7)
@@ -5466,6 +5598,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (19)
@@ -5708,6 +5852,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (6)
@@ -5778,6 +5934,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (4)
@@ -5840,6 +6008,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (47)
@@ -5854,7 +6034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.1
+      value: -29.4
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5902,6 +6082,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (10)
@@ -5972,6 +6164,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (54)
@@ -5982,11 +6186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.1
+      value: -38.6
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.5
+      value: -41.7
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6034,6 +6238,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (51)
@@ -6044,11 +6260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.2
+      value: -39.2
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.7
+      value: -29.8
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6096,6 +6312,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (33)
@@ -6114,11 +6342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49
+      value: 47.3
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -35.1
+      value: -35.5
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6166,6 +6394,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (59)
@@ -6176,7 +6416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.4
+      value: -26.1
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6312,6 +6552,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (15)
@@ -6322,7 +6574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8500001
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6436,6 +6688,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (5)
@@ -6498,6 +6762,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (13)
@@ -6568,6 +6844,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (58)
@@ -6630,6 +6918,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (20)
@@ -6648,11 +6948,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.52
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.29314
+      value: -39
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6700,6 +7000,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (45)
@@ -6770,6 +7082,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (21)
@@ -6788,11 +7112,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.38
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -35.803143
+      value: -35.4
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6840,6 +7164,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (40)
@@ -6910,6 +7246,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (31)
@@ -6928,11 +7276,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.1
+      value: 47.1
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.3
+      value: -41.7
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7042,6 +7390,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (17)
@@ -7052,7 +7412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1200001
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7104,6 +7464,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (46)
@@ -28038,6 +28410,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (57)
@@ -28100,6 +28484,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (14)
@@ -28170,6 +28566,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (39)
@@ -28188,11 +28596,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 30.6
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.3
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28240,6 +28648,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (38)
@@ -28262,7 +28682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.1
+      value: -29.6
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28464,6 +28884,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (36)
@@ -28486,7 +28918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.1
+      value: -29.9
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28534,6 +28966,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (52)
@@ -28544,11 +28988,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.4
+      value: -39.3
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -35.1
+      value: -35.4
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28596,6 +29040,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (34)
@@ -28666,6 +29122,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (49)
@@ -28676,11 +29144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.9
+      value: -32.5
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.9
+      value: -28.6
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28728,6 +29196,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (30)
@@ -28746,11 +29226,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.99
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.373142
+      value: -29.6
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28798,6 +29278,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (37)
@@ -28868,6 +29360,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (3)
@@ -28930,6 +29434,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (50)
@@ -28940,11 +29456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.8
+      value: -36.4
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -31.8
+      value: -31.5
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29076,6 +29592,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (44)
@@ -29094,11 +29622,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.2
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42
+      value: -41.4
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29214,6 +29742,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (08)
@@ -29276,6 +29816,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (12)
@@ -29422,6 +29974,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (11)
@@ -29484,6 +30048,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (32)
@@ -29554,6 +30130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (48)
@@ -29616,6 +30204,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (43)
@@ -29634,11 +30234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.4
+      value: 36.1
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.2
+      value: -41.3
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29686,6 +30286,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (16)
@@ -29756,6 +30368,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (56)
@@ -29766,11 +30390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.3
+      value: -25.9
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.8
+      value: -41.2
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29818,6 +30442,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (24)
@@ -29836,11 +30472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.13
+      value: 7.9
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -30.633142
+      value: -32.2
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29888,6 +30524,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (41)
@@ -29906,11 +30554,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.8
+      value: 42.5
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42
+      value: -41.2
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29958,6 +30606,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (18)
@@ -29972,7 +30632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.463142
+      value: -40.9
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30020,6 +30680,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (42)
@@ -30174,6 +30846,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596366648}
     m_Modifications:
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: maxDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: minDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360192517, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881851, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_Name
       value: DefaultEnemy (35)
@@ -30192,11 +30876,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.8
+      value: 47.1
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.2
+      value: -28.9
       objectReference: {fileID: 0}
     - target: {fileID: 6769659894900881853, guid: 6ce3f3f7455eac04492118d8db5af701, type: 3}
       propertyPath: m_LocalPosition.z
